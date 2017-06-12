@@ -9,6 +9,8 @@ zplug "MichaelAquilina/zsh-autosuggestions"
 export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
+export AGNOSTER_DISABLE_FILE_COUNT=1
+export AGNOSTER_DISABLE_CONTEXT=1
 
 zplug "lib/completion", from:oh-my-zsh
 
