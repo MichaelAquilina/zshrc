@@ -6,8 +6,8 @@ zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-completions"
 zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
-export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
+export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
 export AGNOSTER_DISABLE_FILE_COUNT=1
 export AGNOSTER_DISABLE_CONTEXT=1
