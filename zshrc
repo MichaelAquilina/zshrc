@@ -8,7 +8,7 @@ zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULTENV="default3"
-zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
+zplug "MichaelAquilina/agnoster-zsh-theme", as:theme, at:personal-fork-new,
 export AGNOSTER_DISABLE_FILE_COUNT=1
 export AGNOSTER_DISABLE_CONTEXT=1
 
