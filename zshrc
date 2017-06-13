@@ -40,9 +40,14 @@ fi
 # show ISO8601 timestamp with history
 alias history="fc -li 1"
 
-VIRTUALENVWRAPPER="/usr/bin/virtualenvwrapper"
-if [[ -f "$VIRTUALENVWRAPPER" ]]; then
-  source "$VIRTUALENVWRAPPER"
+VIRTUALENVWRAPPER_SUSE="/usr/bin/virtualenvwrapper"
+VIRTUALENVWRAPPER_UBUNTU="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+
+if [[ -f "$VIRTUALENVWRAPPER_SUSE" ]]; then
+  source "$VIRTUALENVWRAPPER_SUSE"
+  workon default3
+elif [[ -f "$VIRTUALENVWRAPPER_UBUNTU" ]]; then
+  source "$VIRTUALENVWRAPPER_UBUNTU"
   workon default3
 fi
 
