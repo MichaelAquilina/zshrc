@@ -40,14 +40,22 @@ fi
 # show ISO8601 timestamp with history
 alias history="fc -li 1"
 
-VIRTUALENVWRAPPER_SUSE="/usr/bin/virtualenvwrapper"
-VIRTUALENVWRAPPER_UBUNTU="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
 
-if [[ -f "$VIRTUALENVWRAPPER_SUSE" ]]; then
-  source "$VIRTUALENVWRAPPER_SUSE"
-  workon default3
-elif [[ -f "$VIRTUALENVWRAPPER_UBUNTU" ]]; then
-  source "$VIRTUALENVWRAPPER_UBUNTU"
+if [[ "$(uname -a)" = *"Ubuntu"* ]]; then
+  VIRTUALENVWRAPPER="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+  # Allow ctrl+left and ctrl+right movement
+  bindkey ';5D' emacs-backward-word
+  bindkey ';5C' emacs-forward-word
+else
+  VIRTUALENVWRAPPER="/usr/bin/virtualenvwrapper"
+  # Allow ctrl+left and ctrl+right movement
+  bindkey '5D' emacs-backward-word
+  bindkey '5C' emacs-forward-word
+fi
+
+
+if [[ -f "$VIRTUALENVWRAPPER" ]]; then
+  source "$VIRTUALENVWRAPPER"
   workon default3
 fi
 
@@ -72,10 +80,6 @@ eval $(dircolors ~/.dircolors)
 
 # Disable ansible from using cowsay
 export ANSIBLE_NOCOWS=1
-
-# Allow ctrl+left and ctrl+right movement
-bindkey '5D' emacs-backward-word
-bindkey '5C' emacs-forward-word
 
 export WORDCHARS=''
 
