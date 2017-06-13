@@ -73,7 +73,7 @@ elif [[ -f ~/.machinerc ]]; then
 fi
 
 if [[ -f ~/.github ]]; then
-  export GITHUB_TOKEN="$(cat ~/.github)"
+  export GITHUB_TOKEN="$(<~/.github)"
 fi
 
 eval $(dircolors ~/.dircolors)
