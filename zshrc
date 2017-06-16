@@ -11,6 +11,7 @@ export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme, at:personal-fork-new,
 export AGNOSTER_DISABLE_FILE_COUNT=1
 export AGNOSTER_DISABLE_CONTEXT=1
+zplug "MichaelAquilina/zsh-you-should-use"
 zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
     as:command, \
     from:gist, \
@@ -153,13 +154,6 @@ function notify() {
 function flush_gpg_passwords() {
   echo RELOADAGENT | gpg-connect-agent
 }
-
-function lsalias () {
-  for k in "${(@k)aliases}"; do
-    echo "$k -> $aliases[$k]"
-  done
-}
-
 
 ############################
 #         ALIASES          #
