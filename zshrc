@@ -16,6 +16,11 @@ zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
     from:gist, \
     use:git_status.sh, \
     rename-to:git_status
+zplug "MichaelAquilina/9d4d56204e29c7fea399a2b681dcee3c", \
+    as:command, \
+    from:gist, \
+    use:clean_branches.sh,\
+    rename-to:clean_branches
 
 zplug "lib/completion", from:oh-my-zsh
 
@@ -131,15 +136,6 @@ function color_cheatsheet() {
      echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
    done
 }
-
-function clean_branches() {
-  IFS=$'\n'
-  for item in $(git branch --merged master | grep -v master)
-  do
-    git branch -d "${item:2}"
-  done
-}
-
 
 function notify() {
   # Used to notify you when a command has completed
