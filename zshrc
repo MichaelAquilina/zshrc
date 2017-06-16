@@ -154,6 +154,12 @@ function flush_gpg_passwords() {
   echo RELOADAGENT | gpg-connect-agent
 }
 
+function lsalias () {
+  for k in "${(@k)aliases}"; do
+    echo "$k -> $aliases[$k]"
+  done
+}
+
 
 ############################
 #         ALIASES          #
