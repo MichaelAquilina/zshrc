@@ -6,12 +6,16 @@ zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-completions"
 zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
+zplug "MichaelAquilina/zsh-you-should-use"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULTENV="default3"
+
+# Theme
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme, at:personal-fork-new,
 export AGNOSTER_DISABLE_FILE_COUNT=1
 export AGNOSTER_DISABLE_CONTEXT=1
-zplug "MichaelAquilina/zsh-you-should-use"
+
+# Gist Commands
 zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
     as:command, \
     from:gist, \
