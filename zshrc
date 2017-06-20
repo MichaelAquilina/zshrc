@@ -7,6 +7,7 @@ zplug "MichaelAquilina/zsh-completions"
 zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-you-should-use"
+export YSU_MODE=BESTMATCH
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULTENV="default3"
 
