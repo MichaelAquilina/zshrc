@@ -179,6 +179,8 @@ alias less="less -R"
 
 alias shrug='echo $em_shrug'
 
+alias ap="ansible-playbook"
+
 # Git Aliases
 alias gs="git status"
 alias gc="git commit"
