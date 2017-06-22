@@ -169,6 +169,8 @@ function flush_gpg_passwords() {
 alias h="history"
 alias -g NE="2>/dev/null"
 
+alias ab="ansible-playbook"
+
 # Grep Aliases
 alias g="rg"
 alias ig="rg -i"
