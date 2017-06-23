@@ -93,6 +93,11 @@ if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(<~/.github)"
 fi
 
+# Use NeoVim if available
+if [[ -n =nvim ]]; then
+  alias vim=nvim
+fi
+
 eval $(dircolors ~/.dircolors)
 
 # Disable ansible from using cowsay
