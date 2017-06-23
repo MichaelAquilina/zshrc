@@ -8,7 +8,6 @@ zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE=BESTMATCH
-export YSU_HARDCORE=1
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULTENV="default3"
