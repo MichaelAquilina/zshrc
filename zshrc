@@ -31,6 +31,18 @@ zplug "MichaelAquilina/9d4d56204e29c7fea399a2b681dcee3c", \
 
 zplug "lib/completion", from:oh-my-zsh
 
+zplug 'molovo/color', \
+  as:command, \
+  use:'color.zsh', \
+  rename-to:color
+zplug 'molovo/revolver', \
+  as:command, \
+  use:revolver
+zplug 'molovo/zunit', \
+  as:command, \
+  use:zunit, \
+  hook-build:'./build.zsh'
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
