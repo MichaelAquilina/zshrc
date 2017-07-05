@@ -27,7 +27,7 @@ zplug "MichaelAquilina/9d4d56204e29c7fea399a2b681dcee3c", \
     as:command, \
     from:gist, \
     use:clean_branches.sh,\
-    rename-to:clean_branches
+    rename-to:git-clean-branches
 
 zplug "lib/completion", from:oh-my-zsh
 
@@ -210,6 +210,7 @@ alias gr="git rebase"
 alias gst="git stash"
 alias gpum="git pull upstream master"
 alias gd="git diff"
+alias gcb="git clean-branches"
 
 export GH="git@github.com:MichaelAquilina"
 export GL="git@gitlab.com:Aquilina"
@@ -240,8 +241,6 @@ alias xc="xcopy"
 alias xp="xpaste"
 
 alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yellow)%s"'
-
-alias cb="clean_branches"
 
 # Weather in London
 alias weather="curl wttr.in/London"
