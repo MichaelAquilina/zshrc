@@ -185,9 +185,8 @@ function flush_gpg_passwords() {
 alias h="history"
 alias -g NE="2>/dev/null"
 
-# Grep Aliases
-alias g="rg"
-alias ig="rg -i"
+# Dont use grep anymore
+alias grep="echo 'Stop using grep, use rg';"
 
 alias ls="ls --color=auto"
 alias ll="ls -lh --group-directories-first"
