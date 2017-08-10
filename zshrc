@@ -51,8 +51,6 @@ if ! zplug check --verbose; then
   fi
 fi
 
-zplug load
-
 # Infinite History
 export HISTSIZE="999999999999999"
 export HISTFILESIZE="-1"
@@ -85,8 +83,9 @@ fi
 
 if [[ -f "$VIRTUALENVWRAPPER" ]]; then
   source "$VIRTUALENVWRAPPER"
-  workon default3
 fi
+
+zplug load
 
 # Fix VTE Configuration Issues when using Tilix
 # https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
