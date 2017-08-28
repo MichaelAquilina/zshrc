@@ -70,21 +70,17 @@ alias history="fc -li 1"
 
 
 if [[ "$(uname -a)" = *"Ubuntu"* ]]; then
-  VIRTUALENVWRAPPER="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
   # Allow ctrl+left and ctrl+right movement
   bindkey ';5D' emacs-backward-word
   bindkey ';5C' emacs-forward-word
 else
-  VIRTUALENVWRAPPER="/usr/bin/virtualenvwrapper"
   # Allow ctrl+left and ctrl+right movement
   bindkey '5D' emacs-backward-word
   bindkey '5C' emacs-forward-word
 fi
 
 
-if [[ -f "$VIRTUALENVWRAPPER" ]]; then
-  source "$VIRTUALENVWRAPPER"
-fi
+source =virtualenvwrapper.sh
 
 zplug load
 
