@@ -186,6 +186,8 @@ function flush_gpg_passwords() {
 alias h="history"
 alias -g NE="2>/dev/null"
 
+alias v="vim"
+
 # Dont use grep anymore
 alias grep="echo 'Stop using grep, use rg';"
 
