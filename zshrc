@@ -252,3 +252,4 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/bin/:$PATH"
 
 export MANPATH="$HOME/man:$MANPATH"
+export MANPAGER="nvim -c 'set ft=man' -"
