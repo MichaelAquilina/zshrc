@@ -211,6 +211,7 @@ alias gpl="git pull"
 alias gr="git rebase"
 alias gst="git stash"
 alias gpum="git pull upstream master"
+alias grim="git rebase -i master"
 alias gd="git diff"
 alias gcb="git clean-branches"
 
