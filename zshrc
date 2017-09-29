@@ -203,6 +203,7 @@ alias less="less -R"
 alias shrug='echo $em_shrug'
 
 alias ap="ansible-playbook"
+alias dc="docker-compose"
 
 # Git Aliases
 alias gs="git status"
@@ -245,6 +246,7 @@ alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
 alias xc="xcopy"
 alias xp="xpaste"
+alias md="mkdir"
 
 alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yellow)%s"'
 
