@@ -258,3 +258,7 @@ export PATH="$HOME/bin/:$PATH"
 
 export MANPATH="$HOME/man:$MANPATH"
 export MANPAGER="nvim -c 'set ft=man' -"
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
