@@ -191,6 +191,8 @@ alias -g NE="2>/dev/null"
 
 alias v="vim"
 
+alias json="jq '.' -C"
+
 # Dont use grep anymore
 alias grep="echo 'Stop using grep, use rg';"
 
