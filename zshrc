@@ -191,6 +191,10 @@ alias -g NE="2>/dev/null"
 
 alias v="vim"
 
+# Allows aliases to be expanded on watch commands
+# See https://unix.stackexchange.com/questions/25327/watch-command-alias-expansion
+alias watch='watch '
+
 alias json="jq '.' -C"
 
 # Dont use grep anymore
