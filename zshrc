@@ -227,7 +227,7 @@ alias gd="git diff"
 alias gcb="git clean-branches"
 
 export GH="git@github.com:MichaelAquilina"
-export GL="git@gitlab.com:Aquilina"
+export GL="git@gitlab.com:MichaelAquilina"
 export BB="git@bitbucket.org:maquilina"
 
 # Tig Aliases
