@@ -194,9 +194,6 @@ alias watch='watch '
 
 alias json="jq '.' -C"
 
-# Dont use grep anymore
-alias grep="echo 'Stop using grep, use rg';"
-
 alias ls="ls --color=auto"
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
