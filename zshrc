@@ -89,9 +89,6 @@ source =virtualenvwrapper.sh
 
 zplug load
 
-# Check initial directory for any .venv file
-check_venv
-
 # Fix VTE Configuration Issues when using Tilix
 # https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
 if [[ -n "$TILIX_ID" ]]; then
