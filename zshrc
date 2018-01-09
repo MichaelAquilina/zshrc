@@ -255,6 +255,8 @@ alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yell
 alias weather="curl wttr.in/London"
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$ZPLUG_BIN:$PATH"
 export PATH="$HOME/bin/:$PATH"
 
 export MANPATH="$HOME/man:$MANPATH"
