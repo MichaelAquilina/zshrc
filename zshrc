@@ -87,6 +87,11 @@ fi
 
 source =virtualenvwrapper.sh
 
+export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.zplug/bin"
+export PATH="$PATH:$HOME/bin/"
+
 zplug load
 
 # Fix VTE Configuration Issues when using Tilix
@@ -253,11 +258,6 @@ alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yell
 
 # Weather in London
 alias weather="curl wttr.in/London"
-
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$ZPLUG_BIN:$PATH"
-export PATH="$HOME/bin/:$PATH"
 
 export MANPATH="$HOME/man:$MANPATH"
 export MANPAGER="nvim -c 'set ft=man' -"
