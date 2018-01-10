@@ -192,6 +192,7 @@ alias h="history"
 alias -g NE="2>/dev/null"
 
 alias v="vim"
+alias vi="vim"
 
 # Allows aliases to be expanded on watch commands
 # See https://unix.stackexchange.com/questions/25327/watch-command-alias-expansion
