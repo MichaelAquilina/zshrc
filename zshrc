@@ -83,7 +83,7 @@ else
 fi
 
 
-source =virtualenvwrapper.sh
+source =virtualenvwrapper
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
