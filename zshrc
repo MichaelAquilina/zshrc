@@ -10,6 +10,7 @@ zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE=BESTMATCH
+export YSU_MESSAGE_FORMAT="\e[33m\e[1mUse \"%alias\" instead of \"%command\"\e[39m\e[0m"
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULTENV="default3"
