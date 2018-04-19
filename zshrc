@@ -27,9 +27,12 @@ zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
     from:gist, \
     use:git_status.sh, \
     rename-to:git_status
-zplug "MichaelAquilina/git-clean-branches", \
+zplug "MichaelAquilina/git-commands", \
     as:command, \
     use:git-clean-branches
+zplug "MichaelAquilina/git-commands", \
+    as:command, \
+    use:git-web
 
 zplug "lib/completion", from:oh-my-zsh
 
