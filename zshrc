@@ -268,7 +268,6 @@ alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yell
 # Weather in London
 alias weather="curl wttr.in/London"
 
-export MANPATH="$HOME/man:$MANPATH"
 export MANPAGER="nvim -c 'set ft=man' -"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git'"
