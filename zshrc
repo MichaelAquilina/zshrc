@@ -57,9 +57,9 @@ if ! zplug check --verbose; then
 fi
 
 # Infinite History
-export HISTSIZE="9999999"
-export SAVEHIST="9999999"
-export HISTFILESIZE="9999999"
+export HISTSIZE="9999"
+export SAVEHIST="9999"
+export HISTFILESIZE="9999"
 
 setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
