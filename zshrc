@@ -18,7 +18,7 @@ export AUTOSWITCH_DEFAULTENV="default3"
 
 # Theme
 zplug "bhilburn/powerlevel9k", as:theme
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir virtualenv vcs dir_writable)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_VIRTUALENV_BACKGROUND="cyan"
 
