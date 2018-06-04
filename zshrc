@@ -90,11 +90,10 @@ fi
 
 source =virtualenvwrapper
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.zplug/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/bin/:$PATH"
 
 zplug load
 
