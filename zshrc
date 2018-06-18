@@ -207,6 +207,8 @@ alias watch='watch '
 
 alias json="jq '.' -C"
 
+alias curl="curl --silent"
+
 alias ls="ls --color=auto"
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
