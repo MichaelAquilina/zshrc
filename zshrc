@@ -117,10 +117,6 @@ fi
 # Use NeoVim if available
 if [[ -n =nvim ]]; then
   alias vim=nvim
-  # Explicitly set runtime variables.
-  # This allows usage of binaries compiled to run in /usr by default
-  export VIM="$HOME/.local/share/"
-  export VIMRUNTIME="$HOME/.local/share/nvim/runtime"
 fi
 
 eval $(dircolors ~/.dircolors)
