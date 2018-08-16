@@ -277,4 +277,6 @@ export MANPAGER="nvim -c 'set ft=man' -"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git'"
 
+fpath+=~/.zfunc
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
