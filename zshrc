@@ -90,11 +90,6 @@ fi
 
 source =virtualenvwrapper
 
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.zplug/bin:$PATH"
-export PATH="$HOME/.rvm/bin:$PATH"
 
 zplug load
 
@@ -280,3 +275,10 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git'"
 fpath+=~/.zfunc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.zplug/bin:$PATH"
+export PATH="$HOME/.rvm/bin:$PATH"
