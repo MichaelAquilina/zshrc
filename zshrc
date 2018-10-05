@@ -232,7 +232,7 @@ alias gpoh="git push -u origin HEAD"
 alias grim="git rebase -i master"
 alias gd="git diff"
 alias gcb="git clean-branches"
-alias gpohw="gpoh && gw"
+alias gpohw="gpoh && git web --pull-request"
 
 export GH="git@github.com:MichaelAquilina"
 export GL="git@gitlab.com:MichaelAquilina"
