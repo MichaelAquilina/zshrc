@@ -91,8 +91,6 @@ fi
 source =virtualenvwrapper
 
 
-zplug load
-
 # Fix VTE Configuration Issues when using Tilix
 # https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
 if [[ -n "$TILIX_ID" ]]; then
@@ -282,4 +280,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.zplug/bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
-export PATH="$HOME/.fzf/bin:$PATH"
+
+# Leave as last command to prevent weird issues with PATH when
+# changing environments
+zplug load
