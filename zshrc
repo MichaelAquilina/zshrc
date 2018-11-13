@@ -14,7 +14,6 @@ export YSU_MESSAGE_FORMAT="\e[33m\e[1m🚨 Use \"%alias\" instead of \"%command\
 unset YSU_HARDCORE
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
-export AUTOSWITCH_DEFAULTENV="default3"
 
 # Theme
 zplug "bhilburn/powerlevel9k", as:theme
