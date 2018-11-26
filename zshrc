@@ -18,6 +18,8 @@ zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "bhilburn/powerlevel9k", as:theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+# Add ability to truncate to last # of items upstream?
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
 POWERLEVEL9K_VIRTUALENV_BACKGROUND="cyan"
 
 # Gist Commands
