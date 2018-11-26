@@ -243,13 +243,6 @@ export BB="git@bitbucket.org:maquilina"
 alias ta="tig --all"
 alias t="tig"
 
-# Vagrant Aliases
-alias vs="vagrant ssh"
-alias vc="vagrant ssh -c"
-alias vu="vagrant up"
-alias vh="vagrant halt"
-alias vp="vagrant provision"
-
 # Docker Aliases
 alias dcr="docker-compose run"
 
