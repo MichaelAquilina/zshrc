@@ -1,0 +1,37 @@
+version: 2
+
+jobs:
+
+  test-zshrc:
+    docker:
+      - image: "opensuse:tumbleweed"
+    steps:
+      - checkout
+      - run:
+          name: Install zshrc profile
+          command: cp zshrc ~/.zshrc
+      - run:
+          name: Install dependencies
+          command: zypper in -y python3-virtualenvwrapper python3-pip git zsh which
+      - run:
+          name: Install virtualenvwrapper
+          command: pip3 install virtualenvwrapper
+      - run:
+          name: Install zplug
+          command: |
+            git clone https://github.com/zplug/zplug ~/.zplug
+      - run:
+          name: Test out zshrc
+          shell: /usr/bin/zsh
+          command: |
+            export SHELL=/bin/zsh
+            export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+            export TERM="xterm-256color"
+            . ~/.zshrc
+
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-zshrc
