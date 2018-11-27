@@ -51,14 +51,6 @@ zplug 'molovo/zunit', \
 # Remove all aliases from random unexpected places
 unalias -a
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-
 # Infinite History
 export HISTSIZE="9999"
 export SAVEHIST="9999"
