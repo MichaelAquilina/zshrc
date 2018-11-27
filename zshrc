@@ -15,12 +15,11 @@ unset YSU_HARDCORE
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
 # Theme
-zplug "bhilburn/powerlevel9k", as:theme
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-# Add ability to truncate to last # of items upstream?
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
-POWERLEVEL9K_VIRTUALENV_BACKGROUND="cyan"
+zplug "MichaelAquilina/powerlevel9k", as:theme, at:truncate_to_last_custom
+P9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
+P9K_RIGHT_PROMPT_ELEMENTS=()
+P9K_DIR_SHORTEN_STRATEGY="truncate_to_last"
+P9K_VIRTUALENV_BACKGROUND="cyan"
 
 # Gist Commands
 zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
