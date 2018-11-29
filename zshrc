@@ -15,11 +15,11 @@ unset YSU_HARDCORE
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
 # Theme
-zplug "MichaelAquilina/powerlevel9k", as:theme, at:truncate_to_last_custom
-P9K_LAST_NUMBER_OF_DIRS=-2
+zplug "bhilburn/powerlevel9k", as:theme, at:next
 P9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
 P9K_RIGHT_PROMPT_ELEMENTS=()
-P9K_DIR_SHORTEN_STRATEGY="truncate_to_last"
+P9K_DIR_SHORTEN_STRATEGY="dir"
+P9K_DIR_SHORTEN_LENGTH=2
 P9K_VIRTUALENV_BACKGROUND="cyan"
 
 # Gist Commands
