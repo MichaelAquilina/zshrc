@@ -231,6 +231,18 @@ export GH="git@github.com:MichaelAquilina"
 export GL="git@gitlab.com:MichaelAquilina"
 export BB="git@bitbucket.org:maquilina"
 
+# Get original pass binary path before overriding it
+passbin="$(which pass)"
+
+# Never override lines below first line
+function pass() {
+    if [ "$1" = "generate" ] && [ "$2" != "-i" ]; then
+        echo "Don't use generate without -i (in-place)!"
+        return
+    fi
+    "$passbin" $*
+}
+
 # Tig Aliases
 alias ta="tig --all"
 alias t="tig"
