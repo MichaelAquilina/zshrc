@@ -135,6 +135,22 @@ function psync() {
   pass git push backup master
 }
 
+# Get original pass binary path before overriding it
+export passbin="$(which pass)"
+
+function pass() {
+    # Make sure that generate is only ever called with in place
+    if [ "$1" = "generate" ] && [ ${@[(ie)-i]} -gt ${#@} ]; then
+        echo "Don't use generate without -i (in-place)!"
+        echo "Automatically inserting -i for you"
+        # automatically insert -i
+        params=("${@[@]:1:2}" "-i" "${@[@]:2}")
+    else
+        params=("${@[@]:1}")
+    fi
+    "$passbin" ${params[@]}
+}
+
 # Enable 256 color mode
 export TERM="xterm-256color"
 
@@ -230,17 +246,6 @@ alias gpohw="gpoh && git web --pull-request"
 export GH="git@github.com:MichaelAquilina"
 export GL="git@gitlab.com:MichaelAquilina"
 export BB="git@bitbucket.org:maquilina"
-
-# Get original pass binary path before overriding it
-export passbin="$(which pass)"
-
-function pass() {
-    if [ "$1" = "generate" ] && [ "$2" != "-i" ]; then
-        echo "Don't use generate without -i (in-place)!"
-        return
-    fi
-    "$passbin" $*
-}
 
 # Tig Aliases
 alias ta="tig --all"
