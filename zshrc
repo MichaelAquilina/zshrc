@@ -141,8 +141,10 @@ export passbin="$(which pass)"
 function pass() {
     # Make sure that generate is only ever called with in place
     if [ "$1" = "generate" ] && [ ${@[(ie)-i]} -gt ${#@} ]; then
+        printf "\e[33m"
         echo "Don't use generate without -i (in-place)!"
         echo "Automatically inserting -i for you"
+        printf "\e[0m"
         # automatically insert -i
         params=("${@[@]:1:2}" "-i" "${@[@]:2}")
     else
