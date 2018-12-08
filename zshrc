@@ -9,7 +9,7 @@ zplug "MichaelAquilina/zsh-completions"
 zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-you-should-use"
-export YSU_MODE=BESTMATCH
+export YSU_MODE="BESTMATCH"
 unset YSU_HARDCORE
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
@@ -72,19 +72,11 @@ fi
 # show ISO8601 timestamp with history
 alias history="fc -li 1"
 
-
-if [[ "$(uname -a)" = *"Ubuntu"* ]]; then
-  # Allow ctrl+left and ctrl+right movement
-  bindkey ';5D' emacs-backward-word
-  bindkey ';5C' emacs-forward-word
-else
-  # Allow ctrl+left and ctrl+right movement
-  bindkey '5D' emacs-backward-word
-  bindkey '5C' emacs-forward-word
-fi
+# Allow ctrl+left and ctrl+right movement
+bindkey '5D' emacs-backward-word
+bindkey '5C' emacs-forward-word
 
 source =virtualenvwrapper
-
 
 # Fix VTE Configuration Issues when using Tilix
 # https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
@@ -104,7 +96,7 @@ if [[ -f ~/.github ]]; then
 fi
 
 # Use NeoVim if available
-if nvim --version >/dev/null; then
+if type "nvim" >/dev/null; then
   alias vim=nvim
 fi
 
