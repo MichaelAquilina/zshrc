@@ -79,7 +79,7 @@ alias history="fc -li 1"
 bindkey '5D' emacs-backward-word
 bindkey '5C' emacs-forward-word
 
-source =virtualenvwrapper
+source =virtualenvwrapper_lazy
 
 # Fix VTE Configuration Issues when using Tilix
 # https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
