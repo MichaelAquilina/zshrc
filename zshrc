@@ -1,4 +1,7 @@
 #! /bin/zsh
+# record the amount of time zshrc takes to load
+t0=$(date "+%s.%N")
+
 source ~/.zplug/init.zsh
 
 zplug "zplug/zplug", hook-build: 'zplug --self-manage'
@@ -282,3 +285,6 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # Leave as last command to prevent weird issues with PATH when
 # changing environments
 zplug load
+
+t1=$(date "+%s.%N")
+printf "Profile took %.3f seconds to load\n" $((t1-t0))
