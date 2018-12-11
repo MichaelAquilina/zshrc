@@ -280,8 +280,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.zplug/bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
 
-source =virtualenvwrapper_lazy
-
 # Leave as last command to prevent weird issues with PATH when
 # changing environments
 zplug load

@@ -12,10 +12,7 @@ jobs:
           command: cp zshrc ~/.zshrc
       - run:
           name: Install dependencies
-          command: zypper in -y python3-virtualenvwrapper python3-pip git zsh which
-      - run:
-          name: Install virtualenvwrapper
-          command: pip3 install virtualenvwrapper
+          command: zypper in -y git zsh which
       - run:
           name: Install zplug
           command: |
@@ -25,7 +22,6 @@ jobs:
           shell: /usr/bin/zsh
           command: |
             export SHELL=/bin/zsh
-            export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
             export TERM="xterm-256color"
             . ~/.zshrc
 
