@@ -17,6 +17,13 @@ unset YSU_HARDCORE
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
+PURPLE="$(tput setaf 5)"
+GREEN="$(tput setaf 4)"
+BOLD="$(tput bold)"
+NORMAL="$(tput sgr0)"
+export AUTOSWITCH_MESSAGE_FORMAT="\
+Switching %venv_type: ${BOLD}${PURPLE}%venv_name${NORMAL} ${GREEN}[🐍%py_version]${NORMAL}"
+
 # Theme
 zplug "bhilburn/powerlevel9k", as:theme, at:next
 P9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
