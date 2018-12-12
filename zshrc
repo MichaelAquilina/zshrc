@@ -18,7 +18,7 @@ unset YSU_HARDCORE
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
 PURPLE="$(tput setaf 5)"
-GREEN="$(tput setaf 4)"
+GREEN="$(tput setaf 2)"
 BOLD="$(tput bold)"
 NORMAL="$(tput sgr0)"
 export AUTOSWITCH_MESSAGE_FORMAT="\
