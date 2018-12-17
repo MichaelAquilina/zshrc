@@ -153,9 +153,6 @@ function pass() {
     "$passbin" ${params[@]}
 }
 
-# Enable 256 color mode
-export TERM="xterm-256color"
-
 function whatismyip() {
   curl ifconfig.co -s --connect-timeout 1
 }
