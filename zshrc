@@ -1,4 +1,5 @@
 #! /bin/zsh
+zmodload "zsh/zprof"
 # record the amount of time zshrc takes to load
 t0=$(date "+%s.%N")
 
