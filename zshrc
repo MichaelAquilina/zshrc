@@ -10,7 +10,6 @@ zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 zplug "MichaelAquilina/zsh-history-substring-search"
 zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-completions"
-zplug "MichaelAquilina/zsh-emojis"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
