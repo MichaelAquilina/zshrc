@@ -18,6 +18,7 @@ unset YSU_HARDCORE
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
+RED="$(tput setaf 1)"
 PURPLE="$(tput setaf 5)"
 GREEN="$(tput setaf 2)"
 BOLD="$(tput bold)"
@@ -140,14 +141,17 @@ function psync() {
 export passbin="$(which pass)"
 
 function pass() {
-    # Make sure that generate is only ever called with in place
-    if [ "$1" = "generate" ] && [ ${@[(ie)-i]} -gt ${#@} ]; then
-        printf "\e[33m"
-        echo "Don't use generate without -i (in-place)!"
-        echo "Automatically inserting -i for you"
-        printf "\e[0m"
-        # automatically insert -i
-        params=("${@[@]:1:2}" "-i" "${@[@]:2}")
+    if [ "$1" = "generate" ]; then
+        # Make sure that generate is only ever called with "--in-place"
+        # to prevent overriding useful meta-data
+        if [ ${@[(ie)-i]} -gt ${#@} ]; then
+            printf "${RED}"
+            echo "Don't use generate without -i (in-place)!"
+            echo "Automatically inserting -i for you"
+            printf "${NORMAL}"
+            # automatically insert -i
+            params=("${@[@]:1:2}" "-i" "${@[@]:2}")
+        fi
     else
         params=("${@[@]:1}")
     fi
