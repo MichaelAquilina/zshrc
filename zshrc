@@ -140,6 +140,7 @@ function psync() {
 # Get original pass binary path before overriding it
 export passbin="$(which pass)"
 
+# Function wrapper around the "pass" binary to add some convenient functionality
 function pass() {
     if [ "$1" = "generate" ]; then
         # Make sure that generate is only ever called with "--in-place"
