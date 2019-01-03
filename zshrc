@@ -15,6 +15,9 @@ zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
 unset YSU_HARDCORE
 
+zplug "MichaelAquilina/zsh-history-filter"
+export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ")
+
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
 RED="$(tput setaf 1)"
