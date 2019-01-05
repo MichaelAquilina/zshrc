@@ -17,7 +17,7 @@ export YSU_MESSAGE_POSITION="after"
 unset YSU_HARDCORE
 
 zplug "MichaelAquilina/zsh-history-filter"
-export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ")
+export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ", "_TOKEN")
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
