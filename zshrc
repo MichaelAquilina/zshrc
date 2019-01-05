@@ -13,6 +13,7 @@ zplug "MichaelAquilina/zsh-completions"
 zplug "MichaelAquilina/zsh-autosuggestions"
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
+export YSU_MESSAGE_POSITION="after"
 unset YSU_HARDCORE
 
 zplug "MichaelAquilina/zsh-history-filter"
