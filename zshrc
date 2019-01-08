@@ -20,6 +20,8 @@ zplug "MichaelAquilina/zsh-history-filter"
 export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ", "_TOKEN")
 
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
+AUTOSWTICH_DEFAULT_PYTHON="/usr/bin/python3"
+AUTOSWTICH_DEFAULT_REQUIREMENTS="$HOME/.requirements.txt"
 
 RED="$(tput setaf 1)"
 PURPLE="$(tput setaf 5)"
