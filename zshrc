@@ -9,12 +9,10 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
 
-zplugin load "MichaelAquilina/zsh-history-substring-search"
-zplugin load "MichaelAquilina/zsh-syntax-highlighting"
-zplugin load "MichaelAquilina/zsh-completions"
-
-zplugin ice wait'1' silent atload'_zsh_autosuggest_start'
-zplugin light "zsh-users/zsh-autosuggestions"
+zplugin load "zsh-users/zsh-history-substring-search"
+zplugin load "zsh-users/zsh-syntax-highlighting"
+zplugin load "zsh-users/zsh-completions"
+zplugin load "zsh-users/zsh-autosuggestions"
 
 zplugin load "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
@@ -93,6 +91,10 @@ fi
 
 if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(<~/.github)"
+fi
+
+if [[ -f ~/.trello ]]; then
+    source ~/.trello
 fi
 
 # Use NeoVim if available
