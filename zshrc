@@ -193,6 +193,9 @@ function flush_gpg_passwords() {
 #         ALIASES          #
 ############################
 
+alias todo="tro board -n todo"
+alias work="tro board -n work"
+
 alias h="history"
 alias -g NE="2>/dev/null"
 
