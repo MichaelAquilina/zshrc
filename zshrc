@@ -3,26 +3,23 @@ zmodload "zsh/zprof"
 # record the amount of time zshrc takes to load
 t0=$(date "+%s.%N")
 
-### Added by Zplugin's installer
-source '/home/michael/.zplugin/bin/zplugin.zsh'
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin's installer chunk
+source ~/.zplug/init.zsh
 
-zplugin load "zsh-users/zsh-history-substring-search"
-zplugin load "zsh-users/zsh-syntax-highlighting"
-zplugin load "zsh-users/zsh-completions"
-zplugin load "zsh-users/zsh-autosuggestions"
+zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 
-zplugin load "MichaelAquilina/zsh-you-should-use"
+zplug "MichaelAquilina/zsh-history-substring-search"
+zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
+zplug "MichaelAquilina/zsh-completions"
+zplug "MichaelAquilina/zsh-autosuggestions"
+zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
 export YSU_MESSAGE_POSITION="after"
 unset YSU_HARDCORE
 
-zplugin load "MichaelAquilina/zsh-history-filter"
+zplug "MichaelAquilina/zsh-history-filter"
 export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ", "_TOKEN")
 
-zplugin load "MichaelAquilina/zsh-autoswitch-virtualenv"
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 export AUTOSWITCH_DEFAULT_REQUIREMENTS="$HOME/.requirements.txt"
 
@@ -32,22 +29,40 @@ GREEN="$(tput setaf 2)"
 BOLD="$(tput bold)"
 NORMAL="$(tput sgr0)"
 
+# Theme
+zplug "bhilburn/powerlevel9k", as:theme, at:next
 P9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
 P9K_RIGHT_PROMPT_ELEMENTS=()
 P9K_DIR_SHORTEN_STRATEGY="dir"
 P9K_DIR_SHORTEN_LENGTH=2
 P9K_VIRTUALENV_BACKGROUND="cyan"
-zplugin load "bhilburn/powerlevel9k"
-
-zplugin snippet OMZ::/lib/completion.zsh
 
 # Gist Commands
-zplugin ice pick"git-clean-branches" "MichaelAquilina/git-commands"
-zplugin ice pick"git-web" "MichaelAquilina/git-commands"
+zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
+    as:command, \
+    from:gist, \
+    use:git_status.sh, \
+    rename-to:git_status
+zplug "MichaelAquilina/git-commands", \
+    as:command, \
+    use:git-clean-branches
+zplug "MichaelAquilina/git-commands", \
+    as:command, \
+    use:git-web
 
-zplugin ice pick"color.zsh" mv"color.zsh -> color" "molovo/color"
-zplugin ice pick"revolver" "molovo/revolver"
-zplugin ice pick"zunit" compile"build.zsh" "molovo/zunit"
+zplug "lib/completion", from:oh-my-zsh
+
+zplug 'molovo/color', \
+  as:command, \
+  use:'color.zsh', \
+  rename-to:color
+zplug 'molovo/revolver', \
+  as:command, \
+  use:revolver
+zplug 'molovo/zunit', \
+  as:command, \
+  use:zunit, \
+  hook-build:'./build.zsh'
 
 # Remove all aliases from random unexpected places
 unalias -a
@@ -91,10 +106,6 @@ fi
 
 if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(<~/.github)"
-fi
-
-if [[ -f ~/.trello ]]; then
-    source ~/.trello
 fi
 
 # Use NeoVim if available
@@ -285,6 +296,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.zplug/bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
 
+# Leave as last command to prevent weird issues with PATH when
+# changing environments
+zplug load
 
 t1=$(date "+%s.%N")
 printf "Profile took %.3f seconds to load\n" $((t1-t0))
