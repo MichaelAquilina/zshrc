@@ -108,6 +108,10 @@ if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(<~/.github)"
 fi
 
+if [[ -f ~/.trello ]]; then
+  source ~/.trello
+fi
+
 # Use NeoVim if available
 if type "nvim" >/dev/null; then
   alias vim=nvim
