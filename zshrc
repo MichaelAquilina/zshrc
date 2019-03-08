@@ -91,6 +91,11 @@ alias history="fc -li 1"
 bindkey '5D' emacs-backward-word
 bindkey '5C' emacs-forward-word
 
+# Use the gnome-keyring-daemon
+if [[ -n "$DESKTOP_SESSION" ]]; then
+    eval "$(gnome-keyring-daemon -s 2>/dev/null)"
+fi
+
 # Fix VTE Configuration Issues when using Tilix
 # https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
 if [[ -n "$TILIX_ID" ]]; then
