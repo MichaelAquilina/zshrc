@@ -152,22 +152,29 @@ function psync() {
 # Get original pass binary path before overriding it
 export passbin="$(which pass)"
 
-# Function wrapper around the "pass" binary to add some convenient functionality
+# Function wrapper around the "pass" command to add some convenient functionality
 function pass() {
+    local params=()
     if [ "$1" = "generate" ]; then
         # Make sure that generate is only ever called with "--in-place"
-        # to prevent overriding useful meta-data
-        if [ ${@[(ie)-i]} -gt ${#@} ]; then
+        # with existing entries to prevent overriding useful meta-data
+        local target="$HOME/.password-store/${@[-2]}.gpg"
+
+        if stat "$target" &> /dev/null && [ ${@[(ie)-i]} -gt ${#@} ]; then
             printf "${RED}"
             echo "Don't use generate without -i (in-place)!"
             echo "Automatically inserting -i for you"
             printf "${NORMAL}"
             # automatically insert -i
-            params=("${@[@]:1:2}" "-i" "${@[@]:2}")
+            params=("${@[@]:1:1}" "-i" "${@[@]:2}")
         fi
-    else
+    fi
+
+    # Only re-use the parameters passed in if nothing was populated
+    if [[ -z "$params" ]]; then
         params=("${@[@]:1}")
     fi
+    echo "Generated pass command: $passbin ${params[@]}"
     "$passbin" ${params[@]}
 }
 
