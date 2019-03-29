@@ -31,7 +31,7 @@ NORMAL="$(tput sgr0)"
 
 # Theme
 zplug "bhilburn/powerlevel9k", as:theme, at:next
-P9K_LEFT_PROMPT_ELEMENTS=(status virtualenv dir vcs dir_writable)
+P9K_LEFT_PROMPT_ELEMENTS=(status dir vcs dir_writable)
 P9K_RIGHT_PROMPT_ELEMENTS=()
 P9K_DIR_SHORTEN_STRATEGY="dir"
 P9K_DIR_SHORTEN_LENGTH=2
