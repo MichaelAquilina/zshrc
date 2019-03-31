@@ -132,7 +132,7 @@ export WORDCHARS=''
 setopt extended_glob
 
 export PAGER="less"
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Use pushd instead of cd
 setopt AUTO_PUSHD
