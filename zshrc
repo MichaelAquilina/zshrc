@@ -11,6 +11,7 @@ zplug "MichaelAquilina/zsh-history-substring-search"
 zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-completions"
 zplug "MichaelAquilina/zsh-autosuggestions"
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
 export YSU_MESSAGE_POSITION="after"
