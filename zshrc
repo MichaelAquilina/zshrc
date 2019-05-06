@@ -94,7 +94,11 @@ bindkey '5C' emacs-forward-word
 
 # Use the gnome-keyring-daemon
 if [[ -n "$DESKTOP_SESSION" ]]; then
-    eval "$(gnome-keyring-daemon -s 2>/dev/null)"
+    # Work around a bug where gnome keyring wont work unless ssh-agent is first launched
+    eval `ssh-agent -s` &>2 /dev/null
+    # if you get a warning about insecure memory - you need to run
+    # sudo setcap cap_ipc_lock=+ep `which gnome-keyring-daemon`
+    eval `gnome-keyring-daemon -s`
 fi
 
 # Fix VTE Configuration Issues when using Tilix
