@@ -297,6 +297,12 @@ alias xc="xcopy"
 alias xp="xpaste"
 alias md="mkdir"
 
+if [[ -n "$WAYLAND_DISPLAY" ]]; then
+    alias xopen="GDK_BACKEND=wayland xdg-open"
+    alias xcopy="wl-copy"
+    alias xpaste="wl-paste"
+fi
+
 alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yellow)%s"'
 
 # Weather in London
