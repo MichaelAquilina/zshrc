@@ -320,7 +320,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.zplug/bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
 
 # Leave as last command to prevent weird issues with PATH when
