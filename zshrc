@@ -97,7 +97,7 @@ bindkey '5A' end-of-line
 # Use the gnome-keyring-daemon
 if [[ -n "$DESKTOP_SESSION" ]]; then
     # Work around a bug where gnome keyring wont work unless ssh-agent is first launched
-    eval `ssh-agent -s` &>2 /dev/null
+    eval `ssh-agent -s` > /dev/null
     # if you get a warning about insecure memory - you need to run
     # sudo setcap cap_ipc_lock=+ep `which gnome-keyring-daemon`
     eval `gnome-keyring-daemon -s`
