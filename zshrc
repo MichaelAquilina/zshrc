@@ -328,15 +328,5 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # changing environments
 zplug load
 
-if [[ -f "$HOME/.pwd" ]]; then
-    cd "$(< "$HOME/.pwd")"
-fi
-
-function save_pwd() {
-    pwd > "$HOME/.pwd"
-}
-
-add-zsh-hook chpwd save_pwd
-
 t1=$(date "+%s.%N")
 printf "Profile took %.3f seconds to load\n" $((t1-t0))
