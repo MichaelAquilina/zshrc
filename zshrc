@@ -217,7 +217,6 @@ alias h="history"
 alias -g NE="2>/dev/null"
 
 alias v="vim"
-alias vi="vim"
 
 # Allows aliases to be expanded on watch commands
 # See https://unix.stackexchange.com/questions/25327/watch-command-alias-expansion
@@ -232,8 +231,6 @@ alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
 
 alias less="less -R"
-
-alias shrug='echo $em_shrug'
 
 alias ap="ansible-playbook"
 alias dc="docker-compose"
