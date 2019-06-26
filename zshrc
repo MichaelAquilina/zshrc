@@ -49,6 +49,8 @@ zplug "MichaelAquilina/git-commands", \
     as:command, \
     use:git-web
 
+zplug "lib/completion", from:oh-my-zsh
+
 zplug 'molovo/color', \
   as:command, \
   use:'color.zsh', \
