@@ -10,6 +10,7 @@ zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-autosuggestions"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+zplug "MichaelAquilina/zsh-auto-notify"
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
 export YSU_MESSAGE_POSITION="after"
