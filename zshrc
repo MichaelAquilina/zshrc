@@ -11,7 +11,6 @@ zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-autosuggestions"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 zplug "MichaelAquilina/zsh-auto-notify"
-AUTO_NOTIFY_IGNORE+=("emp")
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
 export YSU_MESSAGE_POSITION="after"
@@ -307,6 +306,8 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # Leave as last command to prevent weird issues with PATH when
 # changing environments
 zplug load
+
+AUTO_NOTIFY_IGNORE+=("emp")
 
 t1=$(date "+%s.%N")
 printf "Profile took %.3f seconds to load\n" $((t1-t0))
