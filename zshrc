@@ -11,6 +11,7 @@ zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-autosuggestions"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 zplug "MichaelAquilina/zsh-auto-notify"
+AUTO_NOTIFY_IGNORE+=("emp")
 zplug "MichaelAquilina/zsh-you-should-use"
 export YSU_MODE="BESTMATCH"
 export YSU_MESSAGE_POSITION="after"
