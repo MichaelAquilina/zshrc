@@ -306,6 +306,7 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # changing environments
 zplug load
 
+export AUTO_NOTIFY_THRESHOLD=8
 AUTO_NOTIFY_IGNORE+=("emp")
 
 t1=$(date "+%s.%N")
