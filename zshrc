@@ -270,7 +270,6 @@ alias dcr="docker-compose run"
 # Utilities
 alias pm="pygmentize"
 alias xopen="xdg-open"
-alias LS="LS -e"  # Allow interrupt by Ctrl+C
 alias explore="nautilus"
 alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
