@@ -265,7 +265,7 @@ alias ta="tig --all"
 alias t="tig"
 
 # Docker Aliases
-alias dcr="docker-compose run"
+alias dcr="docker-compose run --rm"
 
 # Utilities
 alias pm="pygmentize"
