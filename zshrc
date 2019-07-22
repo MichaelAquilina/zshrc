@@ -307,7 +307,7 @@ export PATH="$HOME/.rvm/bin:$PATH"
 zplug load
 
 export AUTO_NOTIFY_THRESHOLD=8
-AUTO_NOTIFY_IGNORE+=("emp")
+AUTO_NOTIFY_IGNORE+=("emp" "ipython")
 
 t1=$(date "+%s.%N")
 printf "Profile took %.3f seconds to load\n" $((t1-t0))
