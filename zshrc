@@ -9,27 +9,13 @@ zplug "zplug/zplug", hook-build: 'zplug --self-manage'
 
 zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
 zplug "MichaelAquilina/zsh-autosuggestions"
-export ZSH_AUTOSUGGEST_USE_ASYNC=1
 zplug "MichaelAquilina/zsh-auto-notify"
 zplug "MichaelAquilina/zsh-you-should-use"
-export YSU_MODE="BESTMATCH"
-export YSU_MESSAGE_POSITION="after"
-unset YSU_HARDCORE
-
 zplug "MichaelAquilina/zsh-history-filter"
-export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ", "_TOKEN")
-
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
-export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
-export AUTOSWITCH_DEFAULT_REQUIREMENTS="$HOME/.requirements.txt"
-
 # Theme
 zplug "romkatv/powerlevel10k", as:theme
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status dir vcs dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_DIR_SHORTEN_STRATEGY="dir"
-POWERLEVEL9K_DIR_SHORTEN_LENGTH=2
-POWERLEVEL9K_VIRTUALENV_BACKGROUND="cyan"
+
 
 # Gist Commands
 zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
@@ -289,8 +275,21 @@ export PATH="$HOME/.rvm/bin:$PATH"
 # changing environments
 zplug load
 
+# Plugin Options
+# --------------
+
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export AUTO_NOTIFY_THRESHOLD=8
 AUTO_NOTIFY_IGNORE+=("emp" "ipython")
+export YSU_MESSAGE_POSITION="after"
+export HISTORY_FILTER_EXCLUDE=("_KEY" "Authorization: ", "_TOKEN")
+export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
+export AUTOSWITCH_DEFAULT_REQUIREMENTS="$HOME/.requirements.txt"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status dir vcs dir_writable)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_DIR_SHORTEN_STRATEGY="dir"
+POWERLEVEL9K_DIR_SHORTEN_LENGTH=2
+POWERLEVEL9K_VIRTUALENV_BACKGROUND="cyan"
 
 t1=$(date "+%s.%N")
 printf "Profile took %.3f seconds to load\n" $((t1-t0))
