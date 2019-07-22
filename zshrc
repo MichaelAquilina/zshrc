@@ -23,12 +23,6 @@ zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 export AUTOSWITCH_DEFAULT_REQUIREMENTS="$HOME/.requirements.txt"
 
-RED="$(tput setaf 1)"
-PURPLE="$(tput setaf 5)"
-GREEN="$(tput setaf 2)"
-BOLD="$(tput bold)"
-NORMAL="$(tput sgr0)"
-
 # Theme
 zplug "romkatv/powerlevel10k", as:theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status dir vcs dir_writable)
