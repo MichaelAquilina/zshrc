@@ -108,19 +108,8 @@ if [[ -n "$TILIX_ID" ]]; then
   source /etc/profile.d/vte.sh
 fi
 
-# Source any additional configuration specific to this machine
-if [[ -f ~/.machinerc.gpg ]]; then
-  eval "$(gpg -d --no-tty ~/.machinerc.gpg 2>/dev/null)"
-elif [[ -f ~/.machinerc ]]; then
-  source ~/.machinerc
-fi
-
 if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(<~/.github)"
-fi
-
-if [[ -f ~/.trello ]]; then
-  source ~/.trello
 fi
 
 # Use NeoVim if available
