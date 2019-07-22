@@ -18,11 +18,6 @@ zplug "romkatv/powerlevel10k", as:theme
 
 
 # Gist Commands
-zplug "MichaelAquilina/8d9346a04d67ff2c2c083fb7606bbf2c", \
-    as:command, \
-    from:gist, \
-    use:git_status.sh, \
-    rename-to:git_status
 zplug "MichaelAquilina/git-commands", \
     as:command, \
     use:git-clean-branches
