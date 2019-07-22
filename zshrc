@@ -152,23 +152,6 @@ function whatismyip() {
   curl ifconfig.co -s --connect-timeout 1
 }
 
-function notify() {
-  # Used to notify you when a command has completed
-  # example:  my-long-running-task | notify
-  start_time="$(date +%s)"
-  while read line
-  do
-    echo "$line"
-  done <&0
-  end_time="$(date +%s)"
-  runtime="$((end_time-start_time))"
-  notify-send "Command Completed in $runtime seconds!"
-}
-
-function flush_gpg_passwords() {
-  echo RELOADAGENT | gpg-connect-agent
-}
-
 ############################
 #         ALIASES          #
 ############################
